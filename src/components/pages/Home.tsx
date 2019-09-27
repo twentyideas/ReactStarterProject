@@ -4,7 +4,6 @@ import { Theme } from "@material-ui/core"
 import { makeStyles, CSSProperties } from "@material-ui/styles"
 import { observer } from "mobx-react"
 import React from "react"
-import Store from "store/Store"
 import { useRootClasses } from "style"
 import clsx from "clsx"
 

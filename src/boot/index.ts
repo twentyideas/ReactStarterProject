@@ -1,5 +1,4 @@
 import Store from "store/Store"
-import { Theme } from "style"
 
 /* import styles */
 import 'style/fonts/fonts.css';

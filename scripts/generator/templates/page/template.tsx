@@ -7,7 +7,7 @@ import React from "react"
 import Store from "store/Store"
 import { useRootClasses } from "style"
 
-interface %name%Props extends RouteComponentProps {
+interface %name%Props {
 
 }
 
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     } as CSSProperties
 }))
 
-const %name%: React.FC<React.PropsWithChildren<%name%Props>> = (props: React.PropsWithChildren<%name%Props>) => {
+const %name%: React.FC<React.PropsWithChildren<RouteComponentProps<%name%Props>>> = (props: React.PropsWithChildren<RouteComponentProps<%name%Props>>) => {
     const classes = useStyles();
     const rootClasses = useRootClasses();
 

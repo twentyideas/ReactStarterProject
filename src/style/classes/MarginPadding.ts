@@ -25,6 +25,7 @@ const p = {
 export default (spacing: (n: number) => number) => {
     return {
         // MARGIN CLASSES
+        m0: m.a(spacing(0)),
         ma0: m.a(spacing(0)),
         mt0: m.t(spacing(0)),
         mr0: m.r(spacing(0)),
@@ -33,6 +34,7 @@ export default (spacing: (n: number) => number) => {
         mh0: m.h(spacing(0)),
         mv0: m.v(spacing(0)),
 
+        m1: m.a(spacing(1)),
         ma1: m.a(spacing(1)),
         mt1: m.t(spacing(1)),
         mr1: m.r(spacing(1)),
@@ -41,6 +43,7 @@ export default (spacing: (n: number) => number) => {
         mh1: m.h(spacing(1)),
         mv1: m.v(spacing(1)),
 
+        m2: m.a(spacing(2)),
         ma2: m.a(spacing(2)),
         mt2: m.t(spacing(2)),
         mr2: m.r(spacing(2)),
@@ -49,6 +52,7 @@ export default (spacing: (n: number) => number) => {
         mh2: m.h(spacing(2)),
         mv2: m.v(spacing(2)),
 
+        m3: m.a(spacing(3)),
         ma3: m.a(spacing(3)),
         mt3: m.t(spacing(3)),
         mr3: m.r(spacing(3)),
@@ -57,6 +61,7 @@ export default (spacing: (n: number) => number) => {
         mh3: m.h(spacing(3)),
         mv3: m.v(spacing(3)),
 
+        m4: m.a(spacing(4)),
         ma4: m.a(spacing(4)),
         mt4: m.t(spacing(4)),
         mr4: m.r(spacing(4)),
@@ -65,6 +70,7 @@ export default (spacing: (n: number) => number) => {
         mh4: m.h(spacing(4)),
         mv4: m.v(spacing(4)),
 
+        m5: m.a(spacing(5)),
         ma5: m.a(spacing(5)),
         mt5: m.t(spacing(5)),
         mr5: m.r(spacing(5)),
@@ -73,6 +79,7 @@ export default (spacing: (n: number) => number) => {
         mh5: m.h(spacing(5)),
         mv5: m.v(spacing(5)),
 
+        m6: m.a(spacing(6)),
         ma6: m.a(spacing(6)),
         mt6: m.t(spacing(6)),
         mr6: m.r(spacing(6)),
@@ -81,6 +88,7 @@ export default (spacing: (n: number) => number) => {
         mh6: m.h(spacing(6)),
         mv6: m.v(spacing(6)),
 
+        m7: m.a(spacing(7)),
         ma7: m.a(spacing(7)),
         mt7: m.t(spacing(7)),
         mr7: m.r(spacing(7)),
@@ -89,6 +97,7 @@ export default (spacing: (n: number) => number) => {
         mh7: m.h(spacing(7)),
         mv7: m.v(spacing(7)),
 
+        m8: m.a(spacing(8)),
         ma8: m.a(spacing(8)),
         mt8: m.t(spacing(8)),
         mr8: m.r(spacing(8)),
@@ -97,6 +106,7 @@ export default (spacing: (n: number) => number) => {
         mh8: m.h(spacing(8)),
         mv8: m.v(spacing(8)),
 
+        m9: m.a(spacing(9)),
         ma9: m.a(spacing(9)),
         mt9: m.t(spacing(9)),
         mr9: m.r(spacing(9)),
@@ -105,6 +115,7 @@ export default (spacing: (n: number) => number) => {
         mh9: m.h(spacing(9)),
         mv9: m.v(spacing(9)),
 
+        m10: m.a(spacing(10)),
         ma10: m.a(spacing(10)),
         mt10: m.t(spacing(10)),
         mr10: m.r(spacing(10)),
@@ -113,6 +124,7 @@ export default (spacing: (n: number) => number) => {
         mh10: m.h(spacing(10)),
         mv10: m.v(spacing(10)),
 
+        m11: m.a(spacing(11)),
         ma11: m.a(spacing(11)),
         mt11: m.t(spacing(11)),
         mr11: m.r(spacing(11)),
@@ -121,6 +133,7 @@ export default (spacing: (n: number) => number) => {
         mh11: m.h(spacing(11)),
         mv11: m.v(spacing(11)),
 
+        m12: m.a(spacing(12)),
         ma12: m.a(spacing(12)),
         mt12: m.t(spacing(12)),
         mr12: m.r(spacing(12)),
@@ -129,6 +142,7 @@ export default (spacing: (n: number) => number) => {
         mh12: m.h(spacing(12)),
         mv12: m.v(spacing(12)),
 
+        m13: m.a(spacing(13)),
         ma13: m.a(spacing(13)),
         mt13: m.t(spacing(13)),
         mr13: m.r(spacing(13)),
@@ -137,6 +151,7 @@ export default (spacing: (n: number) => number) => {
         mh13: m.h(spacing(13)),
         mv13: m.v(spacing(13)),
 
+        m14: m.a(spacing(14)),
         ma14: m.a(spacing(14)),
         mt14: m.t(spacing(14)),
         mr14: m.r(spacing(14)),
@@ -145,6 +160,7 @@ export default (spacing: (n: number) => number) => {
         mh14: m.h(spacing(14)),
         mv14: m.v(spacing(14)),
 
+        m15: m.a(spacing(15)),
         ma15: m.a(spacing(15)),
         mt15: m.t(spacing(15)),
         mr15: m.r(spacing(15)),
@@ -153,6 +169,7 @@ export default (spacing: (n: number) => number) => {
         mh15: m.h(spacing(15)),
         mv15: m.v(spacing(15)),
 
+        m16: m.a(spacing(16)),
         ma16: m.a(spacing(16)),
         mt16: m.t(spacing(16)),
         mr16: m.r(spacing(16)),
@@ -161,6 +178,7 @@ export default (spacing: (n: number) => number) => {
         mh16: m.h(spacing(16)),
         mv16: m.v(spacing(16)),
 
+        m17: m.a(spacing(17)),
         ma17: m.a(spacing(17)),
         mt17: m.t(spacing(17)),
         mr17: m.r(spacing(17)),
@@ -169,6 +187,7 @@ export default (spacing: (n: number) => number) => {
         mh17: m.h(spacing(17)),
         mv17: m.v(spacing(17)),
 
+        m18: m.a(spacing(18)),
         ma18: m.a(spacing(18)),
         mt18: m.t(spacing(18)),
         mr18: m.r(spacing(18)),
@@ -177,6 +196,7 @@ export default (spacing: (n: number) => number) => {
         mh18: m.h(spacing(18)),
         mv18: m.v(spacing(18)),
 
+        m19: m.a(spacing(19)),
         ma19: m.a(spacing(19)),
         mt19: m.t(spacing(19)),
         mr19: m.r(spacing(19)),
@@ -185,6 +205,7 @@ export default (spacing: (n: number) => number) => {
         mh19: m.h(spacing(19)),
         mv19: m.v(spacing(19)),
 
+        m20: m.a(spacing(20)),
         ma20: m.a(spacing(20)),
         mt20: m.t(spacing(20)),
         mr20: m.r(spacing(20)),
@@ -194,6 +215,7 @@ export default (spacing: (n: number) => number) => {
         mv20: m.v(spacing(20)),
 
         // PADDING CLASSES
+        p0: p.a(spacing(0)),
         pa0: p.a(spacing(0)),
         pt0: p.t(spacing(0)),
         pr0: p.r(spacing(0)),
@@ -202,6 +224,7 @@ export default (spacing: (n: number) => number) => {
         ph0: p.h(spacing(0)),
         pv0: p.v(spacing(0)),
 
+        p1: p.a(spacing(1)),
         pa1: p.a(spacing(1)),
         pt1: p.t(spacing(1)),
         pr1: p.r(spacing(1)),
@@ -210,6 +233,7 @@ export default (spacing: (n: number) => number) => {
         ph1: p.h(spacing(1)),
         pv1: p.v(spacing(1)),
 
+        p2: p.a(spacing(2)),
         pa2: p.a(spacing(2)),
         pt2: p.t(spacing(2)),
         pr2: p.r(spacing(2)),
@@ -218,6 +242,7 @@ export default (spacing: (n: number) => number) => {
         ph2: p.h(spacing(2)),
         pv2: p.v(spacing(2)),
 
+        p3: p.a(spacing(3)),
         pa3: p.a(spacing(3)),
         pt3: p.t(spacing(3)),
         pr3: p.r(spacing(3)),
@@ -226,6 +251,7 @@ export default (spacing: (n: number) => number) => {
         ph3: p.h(spacing(3)),
         pv3: p.v(spacing(3)),
 
+        p4: p.a(spacing(4)),
         pa4: p.a(spacing(4)),
         pt4: p.t(spacing(4)),
         pr4: p.r(spacing(4)),
@@ -234,6 +260,7 @@ export default (spacing: (n: number) => number) => {
         ph4: p.h(spacing(4)),
         pv4: p.v(spacing(4)),
 
+        p5: p.a(spacing(5)),
         pa5: p.a(spacing(5)),
         pt5: p.t(spacing(5)),
         pr5: p.r(spacing(5)),
@@ -242,6 +269,7 @@ export default (spacing: (n: number) => number) => {
         ph5: p.h(spacing(5)),
         pv5: p.v(spacing(5)),
 
+        p6: p.a(spacing(6)),
         pa6: p.a(spacing(6)),
         pt6: p.t(spacing(6)),
         pr6: p.r(spacing(6)),
@@ -250,6 +278,7 @@ export default (spacing: (n: number) => number) => {
         ph6: p.h(spacing(6)),
         pv6: p.v(spacing(6)),
 
+        p7: p.a(spacing(7)),
         pa7: p.a(spacing(7)),
         pt7: p.t(spacing(7)),
         pr7: p.r(spacing(7)),
@@ -258,6 +287,7 @@ export default (spacing: (n: number) => number) => {
         ph7: p.h(spacing(7)),
         pv7: p.v(spacing(7)),
 
+        p8: p.a(spacing(8)),
         pa8: p.a(spacing(8)),
         pt8: p.t(spacing(8)),
         pr8: p.r(spacing(8)),
@@ -266,6 +296,7 @@ export default (spacing: (n: number) => number) => {
         ph8: p.h(spacing(8)),
         pv8: p.v(spacing(8)),
 
+        p9: p.a(spacing(9)),
         pa9: p.a(spacing(9)),
         pt9: p.t(spacing(9)),
         pr9: p.r(spacing(9)),
@@ -274,6 +305,7 @@ export default (spacing: (n: number) => number) => {
         ph9: p.h(spacing(9)),
         pv9: p.v(spacing(9)),
 
+        p10: p.a(spacing(10)),
         pa10: p.a(spacing(10)),
         pt10: p.t(spacing(10)),
         pr10: p.r(spacing(10)),
@@ -282,6 +314,7 @@ export default (spacing: (n: number) => number) => {
         ph10: p.h(spacing(10)),
         pv10: p.v(spacing(10)),
 
+        p11: p.a(spacing(11)),
         pa11: p.a(spacing(11)),
         pt11: p.t(spacing(11)),
         pr11: p.r(spacing(11)),
@@ -290,6 +323,7 @@ export default (spacing: (n: number) => number) => {
         ph11: p.h(spacing(11)),
         pv11: p.v(spacing(11)),
 
+        p12: p.a(spacing(12)),
         pa12: p.a(spacing(12)),
         pt12: p.t(spacing(12)),
         pr12: p.r(spacing(12)),
@@ -298,6 +332,7 @@ export default (spacing: (n: number) => number) => {
         ph12: p.h(spacing(12)),
         pv12: p.v(spacing(12)),
 
+        p13: p.a(spacing(13)),
         pa13: p.a(spacing(13)),
         pt13: p.t(spacing(13)),
         pr13: p.r(spacing(13)),
@@ -306,6 +341,7 @@ export default (spacing: (n: number) => number) => {
         ph13: p.h(spacing(13)),
         pv13: p.v(spacing(13)),
 
+        p14: p.a(spacing(14)),
         pa14: p.a(spacing(14)),
         pt14: p.t(spacing(14)),
         pr14: p.r(spacing(14)),
@@ -314,6 +350,7 @@ export default (spacing: (n: number) => number) => {
         ph14: p.h(spacing(14)),
         pv14: p.v(spacing(14)),
 
+        p15: p.a(spacing(15)),
         pa15: p.a(spacing(15)),
         pt15: p.t(spacing(15)),
         pr15: p.r(spacing(15)),
@@ -322,6 +359,7 @@ export default (spacing: (n: number) => number) => {
         ph15: p.h(spacing(15)),
         pv15: p.v(spacing(15)),
 
+        p16: p.a(spacing(16)),
         pa16: p.a(spacing(16)),
         pt16: p.t(spacing(16)),
         pr16: p.r(spacing(16)),
@@ -330,6 +368,7 @@ export default (spacing: (n: number) => number) => {
         ph16: p.h(spacing(16)),
         pv16: p.v(spacing(16)),
 
+        p17: p.a(spacing(17)),
         pa17: p.a(spacing(17)),
         pt17: p.t(spacing(17)),
         pr17: p.r(spacing(17)),
@@ -338,6 +377,7 @@ export default (spacing: (n: number) => number) => {
         ph17: p.h(spacing(17)),
         pv17: p.v(spacing(17)),
 
+        p18: p.a(spacing(18)),
         pa18: p.a(spacing(18)),
         pt18: p.t(spacing(18)),
         pr18: p.r(spacing(18)),
@@ -346,6 +386,7 @@ export default (spacing: (n: number) => number) => {
         ph18: p.h(spacing(18)),
         pv18: p.v(spacing(18)),
 
+        p19: p.a(spacing(19)),
         pa19: p.a(spacing(19)),
         pt19: p.t(spacing(19)),
         pr19: p.r(spacing(19)),
@@ -354,6 +395,7 @@ export default (spacing: (n: number) => number) => {
         ph19: p.h(spacing(19)),
         pv19: p.v(spacing(19)),
 
+        p20: p.a(spacing(20)),
         pa20: p.a(spacing(20)),
         pt20: p.t(spacing(20)),
         pr20: p.r(spacing(20)),
@@ -361,6 +403,5 @@ export default (spacing: (n: number) => number) => {
         pl20: p.l(spacing(20)),
         ph20: p.h(spacing(20)),
         pv20: p.v(spacing(20)),
-
     }
 }

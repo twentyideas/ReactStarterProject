@@ -1,10 +1,11 @@
-const lib = require("../lib")
 const inquirer = require('inquirer')
 const lodash = require('lodash')
 const path = require('path')
+const lib = require("../lib")
+const CONFIG = require('../../generator.config')
 
-const MODULES_PATH = path.resolve(__dirname, "../../src/store/modules")
-const STORE_PATH = path.resolve(__dirname, "../../src/store/Store.tsx")
+const MODULES_PATH = CONFIG.PATHS.STORE_MODULES
+const STORE_PATH = path.resolve(CONFIG.PATHS.STORE_MODULES, "../Store.tsx")
 
 const MODULE_TEMPLATE_PATH = path.resolve(__dirname, "./templates/storeModule/template.tsx")
 const STORE_TEMPLATE_PATH = path.resolve(__dirname, "./templates/store/template.tsx")

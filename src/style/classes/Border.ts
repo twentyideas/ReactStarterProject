@@ -8,10 +8,5 @@ export default () => {
         roundedBorder: { borderRadius: '5px !important' } as CSSProperties,
         flatBorder: { borderRadius: '0 !important' } as CSSProperties,
         circleBorder: { borderRadius: '50% !important' } as CSSProperties,
-        shadow: {
-            boxShadow: shadow,
-            WebkitBoxShadow: shadow,
-            MozBoxShadow: shadow
-        } as CSSProperties
     }
 }

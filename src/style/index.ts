@@ -13,6 +13,7 @@ import MarginPadding from "./classes/MarginPadding"
 import Opacity from "./classes/Opacity"
 import Positional from "./classes/Positional"
 import TextAlignment from "./classes/TextAlignment"
+import Shadow from "./classes/Shadow"
 import jss from "jss"
 import jssPluginGlobal from "jss-plugin-global"
 
@@ -79,7 +80,8 @@ function useClasses(theme: MuiTheme) {
         ...MarginPadding(theme.spacing),
         ...Opacity(),
         ...Positional(),
-        ...TextAlignment()
+        ...TextAlignment(),
+        ...Shadow()
     })
 }
 

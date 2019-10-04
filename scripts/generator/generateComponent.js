@@ -2,6 +2,7 @@ const lib = require("../lib")
 const inquirer = require('inquirer')
 const lodash = require('lodash')
 const path = require('path')
+const CONFIG = require('../../generator.config')
 
 const CHOICES = {
     ATOM: "Atom",
@@ -12,10 +13,10 @@ const CHOICES = {
 }
 
 const PATHS = {
-    [CHOICES.ATOM]: path.resolve(__dirname, "../../src/components/atoms"),
-    [CHOICES.MOLECULE]: path.resolve(__dirname, "../../src/components/molecules"),
-    [CHOICES.ORGANISM]: path.resolve(__dirname, "../../src/components/organisms"),
-    [CHOICES.PAGE]: path.resolve(__dirname, "../../src/components/pages"),
+    [CHOICES.ATOM]: CONFIG.PATHS.ATOMS,
+    [CHOICES.MOLECULE]: CONFIG.PATHS.MOLECULES,
+    [CHOICES.ORGANISM]: CONFIG.PATHS.ORGANISMS,
+    [CHOICES.PAGE]: CONFIG.PATHS.PAGES,
 }
 
 const TEMPLATES = {

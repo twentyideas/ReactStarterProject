@@ -36,12 +36,12 @@ const MainLayout: React.FC<React.PropsWithChildren<MainProps>> = (props: React.P
     const rootClasses = useRootClasses();
     const className = clsx(classes.mainLayout, props.className, rootClasses.column, rootClasses.overflowHidden)
 
+    const MainRouter = AppRouter.Main
+
     return (
         <div className={className}>
             <TopBar className={classes.topBar}/>
-            <div className={clsx(classes.mainRouter, rootClasses.overflowAuto, rootClasses.ph1)}>
-                {AppRouter.main}
-            </div>
+            <MainRouter className={clsx(classes.mainRouter, rootClasses.overflowAuto, rootClasses.ph1)}/>
         </div>
     )
 }

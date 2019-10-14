@@ -9,7 +9,7 @@ export default () => { // creates handy classes that are good to use
         MozUserSelect: 'none'
     }
 
-    const pointer: CSSProperties = assign({}, noSelect, { pointer: "cursor" })
+    const pointer: CSSProperties = assign({}, noSelect, { cursor: "pointer" })
     
     return {
         noSelect,

@@ -30,11 +30,12 @@ export const PATHS = {
     HOME: () => "home",
 }
 
-export function getPageName(path: string) {
+export function getPageName(PATH: string) {
+    const path = PATH.startsWith('/') ? PATH.slice(1) : PATH
     const pieces = path.split('/')
 
     const pathNames = keys(PATHS)
-    const pathValues = values(PATHS).map(fn => fn())
+    const pathValues = values(PATHS).map(fn => fn()).map(p => p.startsWith('/') ? p.slice(1) : p)
 
     const matchingPathName = find(pathNames, (name: string, idx: number) => {
         const pathPieces = pathValues[idx].split('/')
@@ -53,11 +54,12 @@ export function getPageName(path: string) {
     })
 
     if (!matchingPathName) {
-        return "React Starter Project"
+        return "MT Game"
     }
 
     return matchingPathName.split('_').map(toLower).map(capitalize).join(' ')
 }
+
 
 const Layout: React.FC<RouterProps> = (props: RouterProps) => (
     <Router className={props.className} style={props.style}>

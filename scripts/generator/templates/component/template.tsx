@@ -8,6 +8,7 @@ import { useRootClasses } from "style"
 interface %name%Props {
     className?: string
     style?: CSSProperties
+    children?: React.ReactNode
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -16,9 +17,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     } as CSSProperties
 }))
 
-const %name%: React.FC<React.PropsWithChildren<%name%Props>> = (props: React.PropsWithChildren<%name%Props>) => {
-    const classes = useStyles();
-    const rootClasses = useRootClasses();
+const %name%: React.FC<%name%Props> = (props: %name%Props) => {
+    const classes = useStyles()
+    const rc = useRootClasses()
     const className = clsx([classes.%className%, props.className])
 
     return (

@@ -4,27 +4,22 @@ import { Theme } from "@material-ui/core"
 import { makeStyles, CSSProperties } from "@material-ui/styles"
 import { observer } from "mobx-react"
 import React from "react"
+import Store from "store/Store"
 import { useRootClasses } from "style"
-import clsx from "clsx"
 
-interface HomeProps extends RouteComponentProps {}
+interface HomeProps {}
 
 const useStyles = makeStyles((theme: Theme) => ({
     homePage: {
-        backgroundColor: "transparent"
+        backgroundColor: theme.palette.background.default
     } as CSSProperties
 }))
 
-const Home: React.FC<React.PropsWithChildren<HomeProps>> = (props: React.PropsWithChildren<HomeProps>) => {
+const Home: React.FC<RouteComponentProps<HomeProps>> = (props: RouteComponentProps<HomeProps>) => {
     const classes = useStyles()
-    const rootClasses = useRootClasses()
+    const rc = useRootClasses()
 
-    return (
-        <div className={classes.homePage}>
-            <h2 className={clsx(rootClasses.textCenter)}>Home Page</h2>
-            {props.children}
-        </div>
-    )
+    return <div className={classes.homePage}>Home Page</div>
 }
 
 export default observer(Home)

@@ -13,6 +13,7 @@ import { toJS } from "mobx"
 interface StoreProps {
     className?: string
     style?: CSSProperties
+    children?: React.ReactNode
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     } as CSSProperties
 }))
 
-const DebugStore: React.FC<React.PropsWithChildren<StoreProps>> = (props: React.PropsWithChildren<StoreProps>) => {
+const DebugStore: React.FC<StoreProps> = (props: StoreProps) => {
     const classes = useStyles()
     const rootClasses = useRootClasses()
     const className = clsx(classes.debugStoreOrganism, props.className)

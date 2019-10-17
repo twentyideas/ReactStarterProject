@@ -11,6 +11,7 @@ import { getPageName } from "Router"
 interface TopBarProps {
     className?: string
     style?: CSSProperties
+    children?: React.ReactNode
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
 }))
 
-const TopBar: React.FC<React.PropsWithChildren<TopBarProps>> = (props: React.PropsWithChildren<TopBarProps>) => {
+const TopBar: React.FC<TopBarProps> = (props: TopBarProps) => {
     const classes = useStyles()
     const { row, itemsCenter, flexGrow, textCenter } = useRootClasses()
     const className = clsx(classes.topBar, props.className)

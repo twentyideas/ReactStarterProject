@@ -2,7 +2,7 @@ import React from "react"
 import { Router } from "@reach/router"
 import { Route, RouteInfo } from "./Route"
 import MainLayout from "components/organisms/Layout/MainLayout"
-import Home from "components/pages/Home"
+import Home from "pages/Home"
 import { keys, values, find, every, toLower, capitalize } from "lodash"
 
 interface RouterProps {

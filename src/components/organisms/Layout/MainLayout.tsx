@@ -10,9 +10,10 @@ import { AppRouter } from "Router"
 import { useRootClasses } from "style"
 
 /* this is really a page */
-interface MainProps extends RouteComponentProps {
+interface MainLayoutProps {
     className?: string
     style?: CSSProperties
+    children?: React.ReactNode
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
 }))
 
-const MainLayout: React.FC<React.PropsWithChildren<MainProps>> = (props: React.PropsWithChildren<MainProps>) => {
+const MainLayout: React.FC<RouteComponentProps<MainLayoutProps>> = (props: RouteComponentProps<MainLayoutProps>) => {
     const classes = useStyles()
     const rootClasses = useRootClasses()
     const className = clsx(classes.mainLayout, props.className, rootClasses.column, rootClasses.overflowHidden)

@@ -22,20 +22,18 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 const TopBar: React.FC<React.PropsWithChildren<TopBarProps>> = (props: React.PropsWithChildren<TopBarProps>) => {
-    const classes = useStyles();
-    const { row, itemsCenter, flexGrow, textCenter } = useRootClasses();
+    const classes = useStyles()
+    const { row, itemsCenter, flexGrow, textCenter } = useRootClasses()
     const className = clsx(classes.topBar, props.className)
 
-    let pageName = getPageName(Store.route.state.location.pathname.replace('/', '') || 'landing')
+    let pageName = getPageName(Store.route.state.location.pathname.replace("/", "") || "landing")
     return (
-        <div className={className}> 
+        <div className={className}>
             <AppBar className={className}>
                 <Toolbar>
                     <div>React Starter App</div>
                     <div className={clsx(flexGrow, textCenter)}>{pageName}</div>
-                    <div className={clsx(row, itemsCenter)}>
-                        {new Date(Store.appContext.state.time.now).toLocaleString()}
-                    </div>
+                    <div className={clsx(row, itemsCenter)}>{new Date(Store.appContext.state.time.now).toLocaleString()}</div>
                 </Toolbar>
             </AppBar>
         </div>

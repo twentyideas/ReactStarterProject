@@ -16,7 +16,10 @@ interface AppContextScreen {
     xl: boolean
     size: string
 }
-interface AppContextTime { started: string, now: string }
+interface AppContextTime {
+    started: string
+    now: string
+}
 interface AppContextState {
     version: string
     clientVersion: string
@@ -41,20 +44,16 @@ function getScreenSize(screenWidth: number) {
     if (screenWidth >= breakPoints.xl) {
         out.xl = true
         out.size = "xl"
-    }
-    else if (screenWidth >= breakPoints.lg) {
+    } else if (screenWidth >= breakPoints.lg) {
         out.lg = true
         out.size = "lg"
-    }
-    else if (screenWidth >= breakPoints.md) {
+    } else if (screenWidth >= breakPoints.md) {
         out.md = true
         out.size = "md"
-    }
-    else if (screenWidth >= breakPoints.sm) {
+    } else if (screenWidth >= breakPoints.sm) {
         out.sm = true
         out.size = "sm"
-    }
-    else {
+    } else {
         out.xs = true
         out.size = "xs"
     }
@@ -73,7 +72,7 @@ function startPeriodicUpdate(appContextInstance: AppContext, interval: number = 
             now: new Date().toISOString()
         }
     } as Partial<AppContextState>
-    
+
     appContextInstance.update(payload)
 
     setTimeout(startPeriodicUpdate, interval, appContextInstance)
@@ -82,7 +81,7 @@ function startPeriodicUpdate(appContextInstance: AppContext, interval: number = 
 export default class AppContext extends Base {
     @observable state: AppContextState = {
         version: "1.0.0",
-        clientVersion: localStorage.getItem('version') || '1.0.0',
+        clientVersion: localStorage.getItem("version") || "1.0.0",
         environment: "dev",
         currentPage: "/",
         devMode: false,
@@ -95,7 +94,6 @@ export default class AppContext extends Base {
         theme: Theme
     }
 
-
     constructor(version: string = "1.0.0", environment: string = "dev") {
         super()
         this.state.environment = environment
@@ -103,7 +101,9 @@ export default class AppContext extends Base {
     }
 
     @computed
-    get needsRefresh() { return this.state.clientVersion !== this.state.version }
+    get needsRefresh() {
+        return this.state.clientVersion !== this.state.version
+    }
 
     @action
     update(payload: Partial<AppContextState>) {

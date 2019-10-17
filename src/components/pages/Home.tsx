@@ -7,9 +7,7 @@ import React from "react"
 import { useRootClasses } from "style"
 import clsx from "clsx"
 
-interface HomeProps extends RouteComponentProps {
-
-}
+interface HomeProps extends RouteComponentProps {}
 
 const useStyles = makeStyles((theme: Theme) => ({
     homePage: {
@@ -18,8 +16,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 const Home: React.FC<React.PropsWithChildren<HomeProps>> = (props: React.PropsWithChildren<HomeProps>) => {
-    const classes = useStyles();
-    const rootClasses = useRootClasses();
+    const classes = useStyles()
+    const rootClasses = useRootClasses()
 
     return (
         <div className={classes.homePage}>

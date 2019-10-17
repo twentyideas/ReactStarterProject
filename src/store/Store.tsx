@@ -14,13 +14,9 @@ export class Store {
     }
 
     async init() {
-        const promises = [
-            this.appContext.init(this),
-            this.route.init(this),
-            this.toasts.init(this)
-        ]
+        const promises = [this.appContext.init(this), this.route.init(this), this.toasts.init(this)]
         return Promise.all(promises)
     }
 }
 
-export default new Store();
+export default new Store()

@@ -2,7 +2,7 @@ import typography from "./config/typography.json"
 import spacing from "./config/spacing.json"
 import palette from "./config/palette.json"
 import breakpoints from "./config/breakpoints.json"
-import { createMuiTheme, makeStyles, Theme as MuiTheme } from '@material-ui/core/styles'
+import { createMuiTheme, makeStyles, Theme as MuiTheme } from "@material-ui/core/styles"
 import { TypographyStyleOptions } from "@material-ui/core/styles/createTypography"
 
 import Border from "./classes/Border"
@@ -59,10 +59,9 @@ function getTheme() {
 }
 
 function useClasses(theme: MuiTheme) {
-
     return makeStyles({
         /* make sure the headers & font matches what we told MUI */
-        '@global': {
+        "@global": {
             body: {
                 fontFamily: theme.typography.fontFamily
             },
@@ -84,7 +83,6 @@ function useClasses(theme: MuiTheme) {
         ...Shadow()
     })
 }
-
 
 /* exports */
 export const Theme = getTheme()

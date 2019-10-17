@@ -7,7 +7,7 @@ const m = {
     b: (n: number) => ({ marginBottom: `${n}px !important` } as CSSProperties),
     l: (n: number) => ({ marginLeft: `${n}px !important` } as CSSProperties),
     h: (n: number) => ({ marginLeft: `${n}px !important`, marginRight: `${n}px  !important` } as CSSProperties),
-    v: (n: number) => ({ marginTop: `${n}px !important`, marginBottom: `${n}px  !important` } as CSSProperties),
+    v: (n: number) => ({ marginTop: `${n}px !important`, marginBottom: `${n}px  !important` } as CSSProperties)
 }
 
 const p = {
@@ -17,9 +17,8 @@ const p = {
     b: (n: number) => ({ paddingBottom: `${n}px !important` } as CSSProperties),
     l: (n: number) => ({ paddingLeft: `${n}px !important` } as CSSProperties),
     h: (n: number) => ({ paddingLeft: `${n}px !important`, paddingRight: `${n}px  !important` } as CSSProperties),
-    v: (n: number) => ({ paddingTop: `${n}px !important`, paddingBottom: `${n}px  !important` } as CSSProperties),
+    v: (n: number) => ({ paddingTop: `${n}px !important`, paddingBottom: `${n}px  !important` } as CSSProperties)
 }
-
 
 // Doing it this way so it is typesafe...
 export default (spacing: (n: number) => number) => {
@@ -402,6 +401,6 @@ export default (spacing: (n: number) => number) => {
         pb20: p.b(spacing(20)),
         pl20: p.l(spacing(20)),
         ph20: p.h(spacing(20)),
-        pv20: p.v(spacing(20)),
+        pv20: p.v(spacing(20))
     }
 }

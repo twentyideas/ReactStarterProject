@@ -5,11 +5,7 @@ const getShadow = (n: number) => {
     const n2 = n1 - 0.6
     const n3 = n1 - 0.8
 
-    const shadow = [
-        `0px 2px 4px -1px rgba(0,0,0,${n1})`, 
-        `0px 4px 5px 0px rgba(0,0,0,${n2})`, 
-        `0px 1px 10px 0px rgba(0,0,0,${n3})`
-    ].join(',')
+    const shadow = [`0px 2px 4px -1px rgba(0,0,0,${n1})`, `0px 4px 5px 0px rgba(0,0,0,${n2})`, `0px 1px 10px 0px rgba(0,0,0,${n3})`].join(",")
     return {
         boxShadow: shadow,
         WebkitBoxShadow: shadow,
@@ -28,6 +24,6 @@ export default () => {
         shadow6: getShadow(6),
         shadow7: getShadow(7),
         shadow8: getShadow(8),
-        shadow9: getShadow(9),
+        shadow9: getShadow(9)
     }
 }

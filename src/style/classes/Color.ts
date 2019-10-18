@@ -47,6 +47,6 @@ export default (palette: Palette) => {
         bgText: { backgroundColor: `${palette.text.primary} !important` } as CSSProperties,
         bgTextSecondary: { backgroundColor: `${palette.text.secondary} !important` } as CSSProperties,
         bgTextHint: { backgroundColor: `${palette.text.hint} !important` } as CSSProperties,
-        bgTextDisabled: { backgroundColor: `${palette.text.disabled} !important` } as CSSProperties,
+        bgTextDisabled: { backgroundColor: `${palette.text.disabled} !important` } as CSSProperties
     }
 }

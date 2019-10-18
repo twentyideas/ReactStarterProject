@@ -10,15 +10,16 @@ import { AppRouter } from "Router"
 import { useRootClasses } from "style"
 
 /* this is really a page */
-interface MainProps extends RouteComponentProps {
+interface MainLayoutProps {
     className?: string
     style?: CSSProperties
+    children?: React.ReactNode
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
     mainLayout: {
-        width: '100vw',
-        height: '100vh',
+        width: "100vw",
+        height: "100vh",
         background: theme.palette.common.white
     },
     topBar: {
@@ -31,17 +32,17 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
 }))
 
-const MainLayout: React.FC<React.PropsWithChildren<MainProps>> = (props: React.PropsWithChildren<MainProps>) => {
-    const classes = useStyles();
-    const rootClasses = useRootClasses();
+const MainLayout: React.FC<RouteComponentProps<MainLayoutProps>> = props => {
+    const classes = useStyles()
+    const rootClasses = useRootClasses()
     const className = clsx(classes.mainLayout, props.className, rootClasses.column, rootClasses.overflowHidden)
 
     const MainRouter = AppRouter.Main
 
     return (
         <div className={className}>
-            <TopBar className={classes.topBar}/>
-            <MainRouter className={clsx(classes.mainRouter, rootClasses.overflowAuto, rootClasses.ph1)}/>
+            <TopBar className={classes.topBar} />
+            <MainRouter className={clsx(classes.mainRouter, rootClasses.overflowAuto, rootClasses.ph1)} />
         </div>
     )
 }

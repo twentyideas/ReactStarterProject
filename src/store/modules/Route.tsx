@@ -13,7 +13,6 @@ export default class Route extends Base {
         location: globalHistory.location,
         prevLocation: undefined
     }
-    
 
     init = async (store: Store) => {
         await super.init(store)
@@ -28,4 +27,3 @@ export default class Route extends Base {
         this.state.location = listener.location
     }
 }
-

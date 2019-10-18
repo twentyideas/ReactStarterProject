@@ -1,17 +1,24 @@
 import { pickBy } from "lodash"
 import React, { useState, useEffect } from "react"
 import CircularProgress from "@material-ui/core/CircularProgress"
-import { RouteComponentProps, Redirect  } from "@reach/router"
+import { RouteComponentProps, Redirect } from "@reach/router"
 
 interface RouteProps extends RouteComponentProps {
-    component: React.ComponentType<RouteComponentProps<{}>>,
-    redirect?: string,
+    component: React.ComponentType<RouteComponentProps<{}>>
+    redirect?: string
     guard?: (to: RouteInfo, from?: RouteInfo) => Promise<boolean | string>
 }
 
-enum STATUS { LOADING, REDIRECT, READY, ERROR }
+enum STATUS {
+    LOADING,
+    REDIRECT,
+    READY,
+    ERROR
+}
 
-interface Params { [key: string]: {} }
+interface Params {
+    [key: string]: {}
+}
 
 export interface RouteInfo {
     path?: string
@@ -20,25 +27,24 @@ export interface RouteInfo {
     query: Params
 }
 
-
 const helpers = {
     previousRouteInfo: undefined as RouteInfo | undefined,
-    getParameters(props: RouteProps) : Partial<RouteProps> {
+    getParameters(props: RouteProps): Partial<RouteProps> {
         const removeKeys = ["component", "default", "guard", "location", "name", "navigate", "path", "redirect", "uri", "children", "*"]
         return pickBy(props, (v, k) => !removeKeys.includes(k))
     },
-    getQuery(url: string = "") : Params {
-        const query: Params = {};
+    getQuery(url: string = ""): Params {
+        const query: Params = {}
         url.replace(/[?&]+([^=&]+)=([^&]*)/gi, (substring, key, value) => {
-            return query[key] = value;
-        });
-        return query;
+            return (query[key] = value)
+        })
+        return query
     },
     pageProps(props: RouteProps) {
         const removeKeys = [`component`, `redirect`, `guard`]
         return pickBy(props, (v, k) => !removeKeys.includes(k))
     },
-    getRouteInfo(props: RouteProps) : RouteInfo {
+    getRouteInfo(props: RouteProps): RouteInfo {
         return {
             path: props.path,
             fullPath: props.location && props.location.pathname,
@@ -48,7 +54,7 @@ const helpers = {
     }
 }
 
-export const Route: React.FC<RouteProps> = (props: RouteProps) => {
+export const Route: React.FC<RouteProps> = props => {
     const [status, setStatus] = useState(STATUS.LOADING)
     const [redirect, setRedirect] = useState(props.redirect || "/login")
 
@@ -88,12 +94,14 @@ export const Route: React.FC<RouteProps> = (props: RouteProps) => {
         onGuard()
     }, [props])
 
-    switch(status) {
-        default: return null;   // error case
-        case STATUS.LOADING: return <CircularProgress/>
-        case STATUS.REDIRECT: return <Redirect noThrow to={redirect}/>
-        case STATUS.READY: return <props.component {...helpers.pageProps(props)} />
+    switch (status) {
+        default:
+            return null // error case
+        case STATUS.LOADING:
+            return <CircularProgress />
+        case STATUS.REDIRECT:
+            return <Redirect noThrow to={redirect} />
+        case STATUS.READY:
+            return <props.component {...helpers.pageProps(props)} />
     }
 }
-
-

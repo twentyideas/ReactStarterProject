@@ -17,14 +17,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     } as CSSProperties
 }))
 
-const %name%: React.FC<React.PropsWithChildren<RouteComponentProps<%name%Props>>> = (props: React.PropsWithChildren<RouteComponentProps<%name%Props>>) => {
-    const classes = useStyles();
-    const rootClasses = useRootClasses();
+const %name%: React.FC<RouteComponentProps<%name%Props>> = props => {
+    const classes = useStyles()
+    const rc = useRootClasses()
 
     return (
         <div className={classes.%className%}>
             %name% Page
-            {props.children}
         </div>
     )
 }

@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     } as CSSProperties
 }))
 
-const %name%: React.FC<RouteComponentProps<%name%Props>> = (props: RouteComponentProps<%name%Props>) => {
+const %name%: React.FC<RouteComponentProps<%name%Props>> = props => {
     const classes = useStyles()
     const rc = useRootClasses()
 

@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     } as CSSProperties
 }))
 
-const %name%: React.FC<%name%Props> = (props: %name%Props) => {
+const %name%: React.FC<%name%Props> = props => {
     const classes = useStyles()
     const rc = useRootClasses()
     const className = clsx(classes.%className%, props.className)

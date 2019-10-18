@@ -54,7 +54,7 @@ const helpers = {
     }
 }
 
-export const Route: React.FC<RouteProps> = (props: RouteProps) => {
+export const Route: React.FC<RouteProps> = props => {
     const [status, setStatus] = useState(STATUS.LOADING)
     const [redirect, setRedirect] = useState(props.redirect || "/login")
 

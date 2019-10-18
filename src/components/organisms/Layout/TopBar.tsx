@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
 }))
 
-const TopBar: React.FC<TopBarProps> = (props: TopBarProps) => {
+const TopBar: React.FC<TopBarProps> = props => {
     const classes = useStyles()
     const { row, itemsCenter, flexGrow, textCenter } = useRootClasses()
     const className = clsx(classes.topBar, props.className)

@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     } as CSSProperties
 }))
 
-const Debug: React.FC<DebugProps> = (props: DebugProps) => {
+const Debug: React.FC<DebugProps> = props => {
     const classes = useStyles()
     const rootClasses = useRootClasses()
     const className = clsx(classes.debugDebugOrganism, props.className)

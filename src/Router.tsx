@@ -66,13 +66,13 @@ export function getPageName(PATH: string) {
         .join(" ")
 }
 
-const Layout: React.FC<RouterProps> = (props: RouterProps) => (
+const Layout: React.FC<RouterProps> = props => (
     <Router className={props.className} style={props.style}>
         <Route path={PATHS.ROOT()} guard={navigationGuards.layout} component={MainLayout} />
     </Router>
 )
 
-const Main: React.FC<RouterProps> = (props: RouterProps) => (
+const Main: React.FC<RouterProps> = props => (
     <Router className={props.className} style={props.style}>
         <Route guard={navigationGuards.app} path={PATHS.HOME()} component={Home} />
     </Router>

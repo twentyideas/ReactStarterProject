@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
 }))
 
-const MainLayout: React.FC<RouteComponentProps<MainLayoutProps>> = (props: RouteComponentProps<MainLayoutProps>) => {
+const MainLayout: React.FC<RouteComponentProps<MainLayoutProps>> = props => {
     const classes = useStyles()
     const rootClasses = useRootClasses()
     const className = clsx(classes.mainLayout, props.className, rootClasses.column, rootClasses.overflowHidden)

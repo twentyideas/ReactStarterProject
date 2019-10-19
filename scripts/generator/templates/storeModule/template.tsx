@@ -38,7 +38,7 @@ export default class %name% extends Base {
         init method here. Called by the store. 
         Delete this if you don't want to do anything special on this module's creation.
     ------------------------------- */
-    async init = (store: Store) => {
+    init = async (store: Store) => {
         await super.init(store)
         return Promise.resolve()
     }

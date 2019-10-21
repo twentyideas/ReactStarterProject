@@ -1,7 +1,6 @@
 import { Theme as MuiTheme } from "@material-ui/core"
 import { isEqual } from "lodash"
 import { action, observable, computed, toJS } from "mobx"
-import * as breakPoints from "style/config/breakpoints.json"
 import Base from "./Base"
 import { Store } from "../Store"
 import { Theme } from "style"
@@ -41,16 +40,16 @@ function getScreenSize(screenWidth: number) {
         size: ""
     }
 
-    if (screenWidth >= breakPoints.xl) {
+    if (screenWidth >= Theme.breakpoints.values.xl) {
         out.xl = true
         out.size = "xl"
-    } else if (screenWidth >= breakPoints.lg) {
+    } else if (screenWidth >= Theme.breakpoints.values.lg) {
         out.lg = true
         out.size = "lg"
-    } else if (screenWidth >= breakPoints.md) {
+    } else if (screenWidth >= Theme.breakpoints.values.md) {
         out.md = true
         out.size = "md"
-    } else if (screenWidth >= breakPoints.sm) {
+    } else if (screenWidth >= Theme.breakpoints.values.sm) {
         out.sm = true
         out.size = "sm"
     } else {

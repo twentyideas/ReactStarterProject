@@ -10,9 +10,7 @@ import { useRootClasses } from "style"
 interface HomeProps {}
 
 const useStyles = makeStyles((theme: Theme) => ({
-    homePage: {
-        backgroundColor: theme.palette.background.default
-    } as CSSProperties
+    homePage: { backgroundColor: theme.palette.background.default } as CSSProperties
 }))
 
 const Home: React.FC<RouteComponentProps<HomeProps>> = props => {

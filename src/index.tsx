@@ -19,9 +19,10 @@ async function main() {
 
     const App = observer(() => (
         <ThemeProvider theme={Store.appContext.state.theme}>
-            <CssBaseLine/>
-            <ToastComponent toastStore={Store.toasts}/>
-            <LayoutRouter/>
+            <CssBaseLine />
+            <ToastComponent toastStore={Store.toasts} />
+            <LayoutRouter />
+            <Debug />
         </ThemeProvider>
     ))
 

@@ -26,7 +26,7 @@ const %name%: React.FC<%name%Props> = props => {
     const className = clsx(classes.%className%, props.className)
 
     return (
-        <div className={className}>
+        <div className={className} style={props.style}>
             {props.children}
         </div>
     )

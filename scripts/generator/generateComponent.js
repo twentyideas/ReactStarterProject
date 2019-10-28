@@ -69,7 +69,10 @@ async function generator(firstRun = true) {
             choices: (prevAnswers) => {
                 const { type } = prevAnswers
                 const foldersInDir = lib.dirsInDirectory(PATHS[type]).map(dir => {
-                    return { name: lodash.last(dir.split(path.sep)), value: dir }
+                    const rootFolder = path.normalize(PATHS[type])
+                    const thisFolder = path.normalize(dir)
+                    const diff = thisFolder.replace(rootFolder, "")
+                    return { name: diff, value: dir }
                 })
                 return [
                     ...foldersInDir,

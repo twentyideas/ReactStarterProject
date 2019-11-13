@@ -17,7 +17,18 @@ const Home: React.FC<RouteComponentProps<HomeProps>> = props => {
     const classes = useStyles()
     const rc = useRootClasses()
 
-    return <div className={classes.homePage}>Home Page</div>
+    const s = new Date(Store.appContext.state.time.now).getSeconds()
+    const m2 = s % 2 === 0
+    const m3 = s % 3 === 0
+
+    return (
+        <div className={classes.homePage}>
+            Home Page
+            <div x-if={m3}>Seconds divisible by 3</div>
+            <div x-else-if={m2}>Seconds divisible by 2</div>
+            <div x-else>Seconds divisible by 1</div>
+        </div>
+    )
 }
 
 export default observer(Home)

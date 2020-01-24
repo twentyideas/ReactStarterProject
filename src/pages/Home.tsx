@@ -23,7 +23,7 @@ const Home: React.FC<RouteComponentProps<HomeProps>> = props => {
 
     return (
         <div className={classes.homePage}>
-            Home Page
+            <h1 className={rc.animationBounce}>Home Page</h1>
             <div x-if={m3}>Seconds divisible by 3</div>
             <div x-else-if={m2}>Seconds divisible by 2</div>
             <div x-else>Seconds divisible by 1</div>

@@ -78,6 +78,8 @@ function startPeriodicUpdate(appContextInstance: AppContext, interval: number = 
 }
 
 export default class AppContext extends Base {
+    _getters = ["needsRefresh"]
+
     @observable state: AppContextState = {
         version: "1.0.0",
         clientVersion: localStorage.getItem("version") || "1.0.0",

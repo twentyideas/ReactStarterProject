@@ -4,7 +4,6 @@
     "private": true,
     "main": "src/index.tsx",
     "dependencies": {
-        "@20i/react-component-generator": "^1.0.30",
         "@20i/react-css-classes": "^1.0.32",
         "@craco/craco": "^5.5.0",
         "@material-ui/core": "^4.4.2",
@@ -42,6 +41,7 @@
         ]
     },
     "devDependencies": {
+        "@20i/react-component-generator": "^1.0.39",
         "@types/fs-extra": "^8.0.0",
         "@types/inquirer": "^6.5.0",
         "@types/jest": "24.0.18",

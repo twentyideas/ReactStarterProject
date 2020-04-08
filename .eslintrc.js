@@ -4,6 +4,8 @@ module.exports = {
         "react-directives/no-unused-vars": "off", // this doubles up
         "object-curly-newline": ["error", { multiline: true, consistent: true }],
         "newline-per-chained-call": "off",
-        "no-shadow": ["error", { allow: ["resolve", "reject"] }]
+        "react-hooks/exhaustive-deps": "off",
+        "@typescript-eslint/semi": "off",
+        "@typescript-eslint/member-delimiter-style": "off"
     }
 }

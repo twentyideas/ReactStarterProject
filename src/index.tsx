@@ -9,6 +9,7 @@ import { AppRouter } from "./Router"
 import * as serviceWorker from "./serviceWorker"
 import Store from "store/Store"
 import { ToastComponent } from "store/modules/Toasts"
+import { DialogComponent } from "store/modules/Dialogs"
 import Debug from "components/organisms/Debug/Debug"
 
 async function main() {
@@ -20,6 +21,7 @@ async function main() {
     const App = observer(() => (
         <ThemeProvider theme={Store.appContext.state.theme}>
             <CssBaseLine />
+            <DialogComponent dialogStore={Store.dialogs} />
             <ToastComponent toastStore={Store.toasts} />
             <LayoutRouter />
             <Debug />
